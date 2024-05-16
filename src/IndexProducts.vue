@@ -120,7 +120,7 @@ export default {
       <div class="productsBox">
         <div class="productsCard" v-for="product in products">
           <h3>{{ product.name }}</h3>
-          <img  :src="product.picture">
+          <img :src="`http://localhost:8000/storage/${product.picture}`" alt="Product image">
           <!-- <img :src="require('../laravel-api/storage/public/picture/' + product.picture)"> -->
           <h4>Catégories :</h4>
           <div v-for="categorie in product.categories">

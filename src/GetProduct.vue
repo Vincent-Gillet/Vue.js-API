@@ -116,10 +116,9 @@ export default {
 
   <main>
     <div class="boxProduitPage">
-      <img  :src="products.picture">
       <div class="boxProduitDescription">
           <h2>{{ products.name }}</h2>
-          <!-- <img :src="require('../laravel-api/storage/public/picture/' + product.picture)"> -->
+          <img :src="`http://localhost:8000/storage/${products.picture}`" alt="Product image">
           <h4>Catégories :</h4>
           <div v-for="categorie in products.categories">
             <h5>{{ categorie.title }}</h5>
